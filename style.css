@@ -77,6 +77,10 @@ img {
     color: white;
 }
 
+.nav-lang-link:first-child {
+    color: #F48B01;
+}
+
 .nav-lang a:hover {
     opacity: .8;
 }

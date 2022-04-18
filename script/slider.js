@@ -8,12 +8,13 @@ let dot6 = document.querySelector(".dot6");
 
 let slideIndex = 1;
 showSlides(slideIndex);
+dot1.classList.add("bg-y")
 
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
 
-  if(n === 1) {
+  if(n === 1 && !dot1.classList.contains("bg")) {
     dot1.classList.add("bg-y");
     dot2.classList.remove("bg-y");
     dot3.classList.remove("bg-y");

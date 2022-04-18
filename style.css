@@ -643,23 +643,23 @@ img {
 
 .connection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(44rem, 1fr));
+    grid-template-columns: repeat(3, minmax(44rem, 1fr));
     grid-gap: 1.5rem;
     justify-content: space-around;
     margin: 2.7rem 0 15.6rem 0;
 }
 
 .connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     max-width: 43rem;
     height: 11rem;
     color: #153E74;
     background-color: #fff;
     font-size: 1.7rem;
-    display: flex;
     border: 1px solid #979797;
-    justify-content: center;
-    align-items: center;
     padding: 1rem 2rem;
 }
 
@@ -671,12 +671,17 @@ img {
     display: flex;
     padding: 0 3rem;
     justify-content: flex-start;
+    font-size: 2.3rem;
 }
 
 .connect-content-text {
     display: flex;
     justify-content: flex-end;
     padding: 0 3rem;
+}
+
+.connect-svg {
+    min-width: 8.5rem;
 }
 
 /** Footer */
@@ -854,6 +859,13 @@ footer h2 {
     }
 }
 
+@media (max-width:1366px) {
+    .connection {
+        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+        justify-items: center;
+    }
+}
+
 @media (max-width:1280px) {
 
     html {
@@ -886,10 +898,6 @@ footer h2 {
             "about-board"
             "about-sg";
         grid-gap: 2rem 0;
-    }
-
-    .connection {
-        justify-items: center;
     }
 
     .vakif-header-img img {
@@ -938,7 +946,7 @@ footer h2 {
 
     .nav {
         display: none;
-        transform: scale(.95) translateX(-200px);
+        transform: translateX(-200px);
         transition: all .3s ease-out;
         width: 200px;
         height: 100vh;
@@ -960,7 +968,7 @@ footer h2 {
         grid-template-areas:
             "nav"
             "lang";
-        transform: scale(1) translateX(0);
+        transform: translateX(0px);
         transition: all .3s ease-out;
         width: 200px;
         height: 100vh;
@@ -991,7 +999,7 @@ footer h2 {
     .placeholder {
         height: 200px;
     }
-    
+
     .slider-logo {
         top: 1vh;
         left: 3vh;
@@ -1021,6 +1029,10 @@ footer h2 {
 
     .panel-container {
         display: grid;
+    }
+
+    .connections {
+        margin: 0 6rem;
     }
 
     .vakif-header-img {
@@ -1065,7 +1077,7 @@ footer h2 {
 
 }
 
-@media (max-width:589px) {
+@media (max-width:590px) {
 
     .ulak-numbers {
         margin: 5rem 5rem;
@@ -1098,18 +1110,77 @@ footer h2 {
         padding: 2rem;
     }
 
-    .social-media {
-        padding: 3rem;
-    }
-
     .social-media-logos {
-        grid-template-columns: repeat(6, 6rem);
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .social-media-link a {
         display: grid;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width:426px) {
+    .home-page-about {
+        margin: 0;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "about-board"
+            "about-sg";
+        grid-gap: 2rem 0;
+    }
+
+    .about-foto-sg {
+        height: 221px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .about-foto-sg div {
+        position: static;
+    }
+    
+    .about-foto-sg img {
+        position: relative;
+        right: 3rem;
+    }
+
+    .education {
+        margin: 10rem 2rem;
+    }
+
+    .features {
+        margin: 0 2rem;
+    }
+
+    .ulak-numbers {
+        margin: 5rem 0;
+    }
+
+    .panel {
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        margin: 0 2rem;
+        grid-gap: 0 6rem;
+    }
+
+    .connections {
+        margin: 0 2rem;
+    }
+
+    .locations {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    .location {
+        padding: 0.5rem;
+        height: 10rem;
+    }
+    .social-media {
+        padding: 3rem 0;
     }
 }
 

@@ -1,4 +1,4 @@
-** Önceki konuşmamızda el hızımı göstermemi istediğinizden, hızlı yapıp göndermeyi tercih ettim, küçük detayları atladım. **
+* Önceki konuşmamızda el hızımı göstermemi istediğinizden, hızlı yapıp göndermeyi tercih ettim, küçük detayları atladım.
 
 * Logo gibi, sosyal medya linkleri gibi görseller'de fotoğraf kullanmak yerine svg kullanılmalıydı. Sayfanın yüklenme hızını olumsuz etkiliyor.
 
@@ -24,6 +24,6 @@ Estitü eğitimlerinde kayıt ol link olmalı, button değil.
 
 Etkinlikler kısmı div yerine link olmalı.
 
-Sayfa resposive olarak küçülürken grid yanlış ayarlanmış, özellikle faydalı bağlantılar kısmında bozulmalar yaşanıyor.
+* Sayfa resposive olarak küçülürken grid yanlış ayarlanmış, özellikle faydalı bağlantılar kısmında bozulmalar yaşanıyor.
 
 * Hakkımızda sayfasında image etrafında boşluk olması gerekiyor.

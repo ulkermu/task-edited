@@ -14,15 +14,15 @@
 
 * Mobil versiyonda site logosu kayboluyor.
 
-Slider fotoğraf değişimde seçili olan fotoğrafın bulunduğunu gösteren gösterge seçili kalmıyor.
+* Slider fotoğraf değişimde seçili olan fotoğrafın bulunduğunu gösteren gösterge seçili kalmıyor.
 
-Slider'de göstergeler bottom ve right kullanılarak verildiği için sayfa değiştikçe yerleri de değişiyor.
+* Slider'de göstergeler bottom ve right kullanılarak verildiği için sayfa değiştikçe yerleri de değişiyor.
 
-Linklere hover yaparken belli belirsiz bir değişim oluyor, daha belirgin olmalıydı.
+* Linklere hover yaparken belli belirsiz bir değişim oluyor, daha belirgin olmalıydı.
 
-Estitü eğitimlerinde kayıt ol link olmalı, button değil.
+* Estitü eğitimlerinde kayıt ol link olmalı, button değil.
 
-Etkinlikler kısmı div yerine link olmalı.
+* Etkinlikler kısmı div yerine link olmalı.
 
 * Sayfa resposive olarak küçülürken grid yanlış ayarlanmış, özellikle faydalı bağlantılar kısmında bozulmalar yaşanıyor.
 

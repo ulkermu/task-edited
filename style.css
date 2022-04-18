@@ -14,15 +14,36 @@ img {
     max-width: 100%;
 }
 
+/** ------------------------- HAMBURGER ------------------------- */
+
+.nav-bar-burger {
+    display: none;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-burger div {
+    width: 21px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: all .5s ease-out;
+}
+
+.nav-links-active {
+    transform: translateY(0);
+}
+
+/** ------------------------- NAV ------------------------- */
+
 .nav {
     height: 53px;
     background: rgba(14, 37, 66, 1);
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 999;
 }
 
 .nav-lang {
@@ -56,16 +77,6 @@ img {
     opacity: 0.8;
 }
 
-.hamburger {
-    font-size: 2rem;
-    display: none;
-}
-
-.hamburger:hover {
-    transition: all .3s ease-out;
-    opacity: .8;
-}
-
 .home {
     font-size: 2rem;
     display: none;
@@ -83,17 +94,17 @@ img {
 
 /** Home Page Slider */
 
-.slide img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-}
-
 .slider-logo {
     z-index: 99;
     position: absolute;
     left: 5vh;
     top: 10vh;
+}
+
+.slide img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
 }
 
 .slider-dots {
@@ -121,7 +132,6 @@ img {
     border: 1px solid #F48B01;
     cursor: pointer;
 }
-
 
 /** Home Page About */
 
@@ -213,6 +223,10 @@ img {
 }
 
 .about-foto img {
+    display: none;
+}
+
+.about-foto svg {
     width: auto;
     height: auto;
     right: .4rem;
@@ -730,10 +744,6 @@ footer h2 {
     overflow-x: hidden;
 }
 
-.placeholder {
-    height: 53px;
-}
-
 .vakif-header-img {
     background-image: url(./images/vakfimiz/header.png);
     background-size: 100% 50%;
@@ -780,6 +790,7 @@ footer h2 {
     font-size: 2.1rem;
     font-style: light;
     font-weight: 300;
+    margin: 3rem;
 }
 
 .vakif-p1 {
@@ -790,12 +801,12 @@ footer h2 {
 
 .align-left {
     float: left;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 .align-right {
     float: right;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .slide-in {
@@ -819,9 +830,6 @@ footer h2 {
 /** ------------ Media Q ------------ */
 
 @media (max-width:1700px) {
-    html {
-        font-size: 9px;
-    }
 
     .home-page-header {
         background-size: contain;
@@ -837,18 +845,25 @@ footer h2 {
         right: 20vh;
     }
 
-    .vakif-header-img img {
+    .xvakif-header-img img {
         padding: 0 0 8rem 20rem;
     }
 
-    .vakif-header-img div {
+    .xvakif-header-img div {
         padding: 0 20rem 8rem 0;
     }
 }
 
 @media (max-width:1280px) {
+
     html {
-        font-size: 8px;
+        font-size: 9px;
+
+    }
+
+    .nav-lang {
+        font-size: 1.44rem;
+        opacity: .63;
     }
 
     .slider-logo {
@@ -886,18 +901,72 @@ footer h2 {
     }
 }
 
-@media (max-width:820px) {
-    html {
-        font-size: 7px;
+@media (max-width:960px) {
+
+    .nav-bar-container {
+        display: flex;
+        right: 1rem;
+        top: 1rem;
+        position: fixed;
+        background-color: #0E2542;
+        border-radius: 50%;
+        z-index: 2500;
+    }
+
+    .nav-bar-container:hover {
+        transition: all .2s ease-out;
+        background-color: #0097E8;
+    }
+
+    .nav-bar-burger {
+        display: block;
+        padding: 6px;
+        text-align: end;
+    }
+
+    .nav-bar-burger-inc .nav-bar-burger-inc-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-bar-burger-inc .nav-bar-burger-inc-2 {
+        opacity: 0;
+    }
+
+    .nav-bar-burger-inc .nav-bar-burger-inc-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .nav {
+        display: none;
+        transform: scale(.95) translateX(-200px);
         transition: all .3s ease-out;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        grid-area: nav;
+        text-align: center;
     }
 
-    .nav.toggle-height {
+    .nav-lang {
+        grid-area: lang;
+        margin-bottom: 40px;
+        text-align: center;
+        align-self: flex-end;
+    }
+
+    .nav.show {
+        display: grid;
+        grid-template-areas:
+            "nav"
+            "lang";
+        transform: scale(1) translateX(0);
         transition: all .3s ease-out;
-        height: 250px;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        justify-content: center;
     }
 
     .nav-links {
@@ -914,37 +983,34 @@ footer h2 {
         padding: 5px;
     }
 
+    .home {
+        display: block;
+        cursor: pointer;
+    }
+
+    .placeholder {
+        height: 200px;
+    }
+    
     .slider-logo {
-        display: none;
+        top: 1vh;
+        left: 3vh;
+    }
+}
+
+@media (max-width:820px) {
+
+    .align-left {
+        margin: 3rem 0;
+    }
+
+    .align-right {
+        margin: 3rem 0;
     }
 
     .slider-dots {
         bottom: 4vh;
         right: 5vh;
-    }
-
-    .about-foto img {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        font-size: 3rem;
-    }
-
-    .hamburger:focus {
-        outline: none;
-    }
-
-    .home {
-        display: block;
-        cursor: pointer;
-        font-size: 3rem;
-    }
-
-    .hamburger:focus {
-        outline: none;
     }
 
     .panel {
@@ -978,6 +1044,25 @@ footer h2 {
     .social-media-link {
         margin: 3px 0;
     }
+}
+
+@media (max-width:680px) {
+
+    .about-foto {
+        background: none;
+        height: auto;
+    }
+
+    .about-foto svg {
+        display: none;
+    }
+
+    .about-foto img {
+        display: block;
+        object-fit: cover;
+        object-position: inherit;
+    }
+
 }
 
 @media (max-width:589px) {

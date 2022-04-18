@@ -1,8 +1,10 @@
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-const nav = document.getElementById('nav');
+const nav = document.querySelector(".nav");
+const navBurger = document.querySelector(".nav-bar-burger");
+const navBar = document.querySelector(".nav-links");
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-  nav.classList.toggle('toggle-height')
-})
+navBurger.addEventListener("click", () => {
+  // Toggle Nav
+  nav.classList.toggle("show");
+  navBar.classList.toggle("show");
+  navBurger.classList.toggle("nav-bar-burger-inc");
+});

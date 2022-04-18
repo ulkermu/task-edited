@@ -816,6 +816,10 @@ footer h2 {
         z-index: 2500;
     }
 
+    .nav-bar-container:focus {
+        outline: none;
+    }
+
     .nav-bar-container:hover {
         transition: all .2s ease-out;
         background-color: #0097E8;

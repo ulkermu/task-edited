@@ -802,6 +802,10 @@ footer h2 {
             "about-sg";
         grid-gap: 2rem 0;
     }
+
+    .education-register {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width:960px) {

@@ -835,7 +835,7 @@ footer h2 {
         text-align: end;
     }
 
-    .nav-bar-burger-inc .nav-bar-burger-inc-1 {
+    .nav-bar-burger-inc .nav-bar-burger-inc-1  {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
@@ -846,7 +846,6 @@ footer h2 {
     .nav-bar-burger-inc .nav-bar-burger-inc-3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-
     .nav {
         display: none;
         transform: translateX(-200px);
